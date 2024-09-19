@@ -90,6 +90,7 @@ RUN \
     tar -xf /tmp/libz.tar -C /tmp/libz && \
     mv /tmp/libz/usr/lib/libz.so* /usr/glibc-compat/lib && \
     apk del --purge .build-deps glibc-i18n && \
+    apk add openjdk21 maven \
     rm -rf /tmp/*.apk /tmp/libz /tmp/libz.tar* /var/cache/apk/* && \
   # end installing glibc/zlib && \
   curl --fail --location --silent --show-error "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.4%2B7/OpenJDK21U-jre_$(uname -m | sed -e s/86_//g)_linux_hotspot_21.0.4_7.tar.gz" --output /tmp/jre.tar.gz && \
