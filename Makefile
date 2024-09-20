@@ -3,7 +3,7 @@ UID=$(shell id -u):$(shell id -g)
 
 REGISTRY_BASE=registry.digitalocean.com/four-pm-docker
 IMAGE_NAME=4pm-gocd-agent-dind
-IMAGE_TAG=1.0.0
+IMAGE_TAG=1.0.1
 
 all: login build push logout
 
